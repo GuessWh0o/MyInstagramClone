@@ -2,7 +2,8 @@ package clone.myinsta.max.myinstagramclone
 
 import android.content.Intent
 import android.support.v7.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_profile.*
+import kotlinx.android.synthetic.main.bottom_nav_view.*
+
 
 abstract class BaseActivity(private val navNumber: Int) : AppCompatActivity() {
 

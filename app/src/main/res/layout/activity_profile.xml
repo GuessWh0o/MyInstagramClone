@@ -4,38 +4,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
     tools:context=".HomeActivity">
-
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/colorWhitish"
-        android:elevation="4dp">
+        style="@style/toolbar">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:text="dev.android.max"
-                android:textColor="@color/colorBlack"
-                android:textSize="19sp"
+                style="@style/toolbar_title"
+                android:text="dev.android.maks"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:padding="10dp"
+                style="@style/toolbar_image"
                 android:src="@drawable/ic_more"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.Toolbar>
@@ -48,7 +38,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="15dp"
         android:src="@drawable/photo"
-        app:civ_border_color="@color/colorGrey"
+        app:civ_border_color="@color/colorWhite"
         app:civ_border_width="1dp"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toStartOf="@id/btn_edit_profile"
@@ -110,9 +100,9 @@
     <Button
         android:id="@+id/btn_edit_profile"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="15dp"
+        android:layout_height="36dp"
         android:layout_marginBottom="5dp"
+        android:layout_marginEnd="15dp"
         android:background="@drawable/button_bg"
         android:paddingBottom="4dp"
         android:paddingTop="4dp"
@@ -123,13 +113,6 @@
         app:layout_constraintStart_toEndOf="@id/iv_profile" />
 
 
-    <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
-        android:id="@+id/bottom_nav_view"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@color/colorWhitish"
-        android:elevation="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
+    <include layout="@layout/bottom_nav_view" />
 
 </android.support.constraint.ConstraintLayout>
